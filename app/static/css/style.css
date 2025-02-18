@@ -1,0 +1,227 @@
+/* Общие стили */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto Mono', monospace;
+    color: #6fffe9; /* Неоновый акцент */
+}
+
+p {
+    color: #dcdcdc;
+}
+
+a {
+    color: #6fffe9;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Навигационная панель */
+.navbar {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px); /* Размытие для футуристического эффекта */
+    border-bottom: 1px solid #6fffe9;
+}
+
+.navbar-brand {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.5rem;
+    color: #6fffe9 !important;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #6fffe9;
+}
+
+/* Карточки товаров */
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 255, 234, 0.3);
+}
+
+.card-title {
+    font-family: 'Roboto Mono', monospace;
+    color: #6fffe9;
+}
+
+.card-text {
+    color: #dcdcdc;
+}
+
+/* Кнопки */
+.btn-primary {
+    background: linear-gradient(135deg, #00dbde, #fc00ff);
+    border: none;
+    color: #ffffff;
+    font-family: 'Roboto Mono', monospace;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 255, 234, 0.5);
+}
+
+/* Форма поиска */
+.search-form {
+    display: flex;
+    gap: 10px;
+}
+
+.search-form input {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.search-form button {
+    background: linear-gradient(135deg, #00dbde, #fc00ff);
+    border: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Базовые переменные */
+:root {
+    --bg-color: #0f0c29;
+    --text-color: #ffffff;
+    --accent-color: #6fffe9;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --navbar-bg: rgba(0, 0, 0, 0.8);
+}
+
+/* Темная тема */
+[data-theme="dark"] {
+    --bg-color: #0f0c29;
+    --text-color: #ffffff;
+    --accent-color: #6fffe9;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --navbar-bg: rgba(0, 0, 0, 0.8);
+}
+
+/* Светлая тема */
+[data-theme="light"] {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --accent-color: #007bff;
+    --card-bg: #f8f9fa;
+    --navbar-bg: #ffffff;
+}
+
+/* Глобальные стили */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.navbar {
+    background: var(--navbar-bg);
+    border-bottom: 1px solid var(--accent-color);
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary {
+    background: var(--accent-color);
+    border: none;
+    color: #ffffff;
+    font-family: 'Roboto Mono', monospace;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Анимация кнопок */
+.btn {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05); /* Увеличиваем кнопку на 5% */
+    box-shadow: 0 4px 10px rgba(0, 255, 234, 0.5); /* Добавляем тень */
+}
+
+/* Анимация карточек */
+.card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Подвал */
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid #6fffe9;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    color: #dcdcdc;
+}

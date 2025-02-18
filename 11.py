@@ -1,0 +1,12 @@
+
+
+
+
+"""
+import secrets
+
+# Генерация случайного ключа
+secret_key = secrets.token_hex(16)
+print(secret_key)
+
+"""

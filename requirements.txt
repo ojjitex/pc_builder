@@ -1,0 +1,12 @@
+flask
+flask_sqlalchemy
+flask_login
+flask_babel
+flask-wtf
+flask-migrate
+requests
+reportlab
+python-dotenv
+pytest
+pytest-flask
+email-validator

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Личный кабинет</h1>
+<h2>Сохранённые конфигурации</h2>
+<ul>
+    {% for config in configurations %}
+        <li>
+            {{ config.name }}
+            <a href="{{ url_for('export', config_id=config.id) }}" class="btn btn-sm btn-success">Экспорт в PDF</a>
+            <form action="{{ url_for('send', config_id=config.id) }}" method="POST" style="display:inline;">
+                <input type="email" name="email" placeholder="Введите email" required>
+                <button type="submit" class="btn btn-sm btn-primary">Отправить на почту</button>
+            </form>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
